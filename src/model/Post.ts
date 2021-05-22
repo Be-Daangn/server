@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 
 const PostSchema = new mongoose.Schema({
+    title_idx: {
+        type: Number
+    },
     title :    {
         type: String
     },
@@ -15,15 +18,6 @@ const PostSchema = new mongoose.Schema({
     },
     info : {
         type: String
-    },
-    review: {
-        type: Number
-    },
-    customer: { 
-        type: Number
-    },
-    bookmark: {
-        type: Boolean
     }
 });
 

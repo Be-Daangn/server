@@ -1,14 +1,14 @@
-import express from "express"; // [1]
-const app = express(); // [2]
+import express from "express"; 
+const app = express(); 
 import connectDB from "./Loaders/db";
 
 // Connect Database
 connectDB();
 
-app.use(express.json()); // [3]
+app.use(express.json()); 
 
 // Define Routes
-//app.use("/api/users", require("./api/users")); // [4]
+app.use("/api/main", require("./api/main")); 
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -21,7 +21,7 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-app // [5]
+app 
   .listen(5000, () => {
     console.log(`
     ################################################
