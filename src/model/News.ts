@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const PostSchema = new mongoose.Schema({
+const NewsSchema = new mongoose.Schema({
     title_idx: {
         type: Number
     },
@@ -21,4 +21,4 @@ const PostSchema = new mongoose.Schema({
     }
 });
 
-export default mongoose.model<mongoose.Document>("Post", PostSchema);
+export default mongoose.model<mongoose.Document>("News", NewsSchema);
