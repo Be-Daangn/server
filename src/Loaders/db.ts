@@ -1,5 +1,7 @@
 import mongoose from "mongoose";
 import config from "../config"; 
+import News from "../model/News";
+import Recommend from "../model/Recommend";
 
 const connectDB = async () => {
   try {
@@ -10,6 +12,12 @@ const connectDB = async () => {
     });
 
     console.log("Mongoose Connected ...");
+    News.createCollection().then(function(collection){
+      console.log("Friends Collection is created!");
+    });
+    Recommend.createCollection().then(function(collection){
+      console.log("Friends Collection is created!");
+    });
   } catch (err) {
     console.error(err.message);
     process.exit(1);

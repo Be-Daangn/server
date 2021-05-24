@@ -1,24 +1,30 @@
 import mongoose from "mongoose";
-
+import { INews } from "../interfaces/INews";
 const NewsSchema = new mongoose.Schema({
     title_idx: {
-        type: Number
+        type: Number,
+        required: true
     },
     title :    {
-        type: String
+        type: String,
+        required: true
     },
     image: {
-        type: String
+        type: String,
+        required: true
     },
     event: {
-        type: String
+        type: String,
+        required: true
     },
     place: {
-        type: String
+        type: String,
+        required: true
     },
     info : {
-        type: String
+        type: String,
+        required: true
     }
 });
 
-export default mongoose.model<mongoose.Document>("News", NewsSchema);
+export default mongoose.model<INews & mongoose.Document>("News", NewsSchema);

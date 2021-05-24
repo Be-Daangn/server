@@ -1,27 +1,35 @@
 import mongoose from "mongoose";
+import { IRecommend } from "../interfaces/IRecommend";
 
 const RecommendSchema = new mongoose.Schema({
     title_idx: {
-        type: Number
+        type: Number,
+        required: true
     },
     title: {
-        type: String
+        type: String,
+        required: true
     },
     image: {
-        type: String
+        type: String,
+        required: true
     },
     review: {
-        type: Number
+        type: Number,
+        required: true
     },
     customer: {
-        type: Number
+        type: Number,
+        required: true
     },
     place: {
-        type: String
+        type: String,
+        required: true
     },
     bookmark: {
-        type: Boolean
+        type: Boolean,
+        required: true
     }
 });
 
-export default mongoose.model<mongoose.Document>("Recommend", RecommendSchema);
+export default mongoose.model<IRecommend & mongoose.Document>("Recommend", RecommendSchema);
