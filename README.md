@@ -1,2 +1,4 @@
-# node-typescript-init
-본인 개발 용도 nodejs express mongoDB typescript 초기 개발 환경 구축 
+## SOPT 클라이언트 서버 합동 세미나 - 당근 마켓
+ 
+#### 개발   
+박세은, 채정아
