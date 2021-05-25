@@ -61,7 +61,7 @@ router.get("/news", async (req, res) => {
     try{
         const news = await News.find();
         if(!news.length){
-            return res.status(200).send({ success: true, message : "소식 리스트 없음"});
+            return res.status(200).send({ success: true, message : "소식 리스트 없음", data: news});
         }
         res.json({status: 200, success: true, message: "소식 리스트 가져오기 성공", data: news });
     } catch (error){
@@ -80,7 +80,7 @@ router.get("/recommend", async (req, res) => {
     try{
         const posts = await Recommend.find();
         if(!posts.length){
-            return res.status(200).send({ success: true, message : "추천 리스트 없음"});
+            return res.status(200).send({ success: true, message : "추천 리스트 없음", data: posts});
         }
         res.json({status: 200, success: true, message: "추천 리스트 가져오기 성공", data: posts });
     } catch (error){
@@ -97,7 +97,7 @@ router.get("/recommend/bookmark", async (req, res) => {
     try{
         const bookmark = await Recommend.find({bookmark: true});
         if(!bookmark.length){
-            return res.status(200).send({ success: true, message: "저장된 목록 없음"});
+            return res.status(200).send({ success: true, message: "저장된 목록 없음", data: bookmark});
         }
         res.json({ status: 200, success: true, message: "북마크 가져오기성공", data: bookmark });
     } catch (error){
