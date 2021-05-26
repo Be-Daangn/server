@@ -2,6 +2,8 @@
  
 #### 개발   
 박세은, 채정아
+  
+[API 명세서](https://github.com/Be-Daangn/server/wiki/API-%EB%AA%85%EC%84%B8%EC%84%9C)   
 
 #### Model - News 소식 글   
 <details>
